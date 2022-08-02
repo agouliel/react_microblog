@@ -6,9 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install`
 
-Reads the package.json file, installs the dependencies and generates the package-lock.json file.
+Reads the `package.json` file, installs the dependencies and generates the `package-lock.json` file.
 
 ### `npm start`
 
