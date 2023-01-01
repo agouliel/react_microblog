@@ -1,7 +1,6 @@
 import { Container } from "react-bootstrap";
-import Stack from 'react-bootstrap/Stack';
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
+import Body from "./components/Body";
 import Posts from "./components/Posts";
 
 export default function App() {
@@ -10,16 +9,9 @@ export default function App() {
     <Container fluid className="App">
     <Header />
 
-    <Container>
-    <Stack direction="horizontal">
-    <Sidebar />
-    
-    <Container>
+    <Body sidebar>
       <Posts />
-    </Container>
-    
-    </Stack>
-    </Container>
+    </Body>
 
     </Container>
   )
