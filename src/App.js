@@ -2,27 +2,10 @@ import { Container } from "react-bootstrap";
 import Stack from 'react-bootstrap/Stack';
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
+import Posts from "./components/Posts";
 
 export default function App() {
-  const posts = [
-    {
-      id: 1,
-      text: 'First',
-      timestamp: 'a minute ago',
-      author: {
-        username: 'susan',
-      },
-      },
-      {
-        id: 2,
-        text: 'Second',
-        timestamp: 'an hour ago',
-        author: {
-          username: 'john',
-        },
-      }
-  ];
-
+  
   return (
     <Container fluid className="App">
     <Header />
@@ -32,20 +15,7 @@ export default function App() {
     <Sidebar />
     
     <Container>
-    {posts.length === 0 ?
-      <p>There are no blog posts.</p>
-    :
-    posts.map(post => {
-
-    return (
-    <p key={post.id}>
-      <b>{post.author.username}</b> &mdash; {post.timestamp}
-      <br />
-      {post.text}
-    </p>
-    );
-
-    })}
+      <Posts />
     </Container>
     
     </Stack>
