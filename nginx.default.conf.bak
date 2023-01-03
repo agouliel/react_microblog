@@ -1,19 +1,6 @@
 server {
     listen       80;
     server_name  _;
-    location / {
-        # redirect any requests to the same URL but on https
-        return 301 https://$host$request_uri;
-    }
-}
-
-server {
-    listen 443 ssl;
-    server_name _;
-
-    # location of the self-signed SSL certificate
-    ssl_certificate /etc/nginx/cert.pem;
-    ssl_certificate_key /etc/nginx/key.pem;
 
     root   /usr/share/nginx/html;
     index  index.html;
