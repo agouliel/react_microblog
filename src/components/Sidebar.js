@@ -1,14 +1,19 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import {LinkContainer} from 'react-router-bootstrap';
 
 export default function Sidebar() {
   return (
     <Navbar sticky="top" className="flex-column Sidebar">
       <Nav.Item>
-        <Nav.Link href="/" end>Feed</Nav.Link>
+        <LinkContainer to="/">
+        <Nav.Link>Feed</Nav.Link>
+        </LinkContainer>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="/explore">Explore</Nav.Link>
+        <LinkContainer to="/explore">
+        <Nav.Link>Explore</Nav.Link>
+        </LinkContainer>
       </Nav.Item>
     </Navbar>
   );
