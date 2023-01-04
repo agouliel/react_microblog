@@ -9,7 +9,7 @@ export default function App() {
   
   return (
     <Container fluid className="App">
-    <BrowserRouter>
+    <BrowserRouter basename="/microblog">
     <Header />
 
     <Routes>
