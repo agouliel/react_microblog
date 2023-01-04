@@ -1,4 +1,40 @@
-https://github.com/miguelgrinberg/react-microblog/
+# Notes
+
+https://apple.stackexchange.com/questions/373888/how-do-i-start-the-docker-daemon-on-macos
+
+`brew install colima`   
+`colima start`   
+
+## Dependencies for colima:
+ninja, ca-certificates, openssl@1.1, readline, sqlite, xz, python@3.11, meson, capstone, gettext, pcre2, glib, gmp, gnu-sed, bdw-gc, libunistring, guile, libidn2, libtasn1, nettle, p11-kit, libevent, libnghttp2, unbound, gnutls, jpeg-turbo, libpng, libslirp, libssh, libusb, lzo, ncurses, pixman, snappy, vde, lz4, zstd, qemu and lima
+
+https://github.com/nvm-sh/nvm
+
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`   
+`nvm install node`   
+
+# Installation without Docker
+
+`mkdir microblog`   
+`cd microblog`   
+
+`git clone https://github.com/miguelgrinberg/microblog-api.git`   
+`cd microblog-api`   
+`echo "DISABLE_AUTH=true" > .env`   
+`venv`   
+`pip install -r requirements.txt`   
+`flask db upgrade`   
+`flask fake users 10`   
+`flask fake posts 100`   
+`flask run`   
+
+`git clone https://github.com/agouliel/react_microblog.git`   
+(full version: https://github.com/miguelgrinberg/react-microblog/)
+`cd react_microblog`   
+`rm .env.production`   
+`npm install`   
+`npm start`   
+(or `npm run build && npx serve -s build`)
 
 # Getting Started with Create React App
 
