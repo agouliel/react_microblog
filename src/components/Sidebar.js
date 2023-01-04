@@ -5,10 +5,10 @@ export default function Sidebar() {
   return (
     <Navbar sticky="top" className="flex-column Sidebar">
       <Nav.Item>
-        <Nav.Link to="/" end>Feed</Nav.Link>
+        <Nav.Link href="/" end>Feed</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link to="/explore">Explore</Nav.Link>
+        <Nav.Link href="/explore">Explore</Nav.Link>
       </Nav.Item>
     </Navbar>
   );
