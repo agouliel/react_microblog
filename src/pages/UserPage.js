@@ -42,6 +42,7 @@ export default function UserPage() {
                   </p>
                 </div>
               </Stack>
+              <Posts content={user.id} />
             </>
           }
         </>
