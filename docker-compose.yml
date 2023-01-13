@@ -11,12 +11,15 @@ services:
     build: ../microblog-api
     image: microblog-api
     volumes:
-      - type: volume
-        source: data
-        target: /data
+      - ../microblog-api/data:/data
     env_file: .env.api
     environment:
       DATABASE_URL: sqlite:////data/db.sqlite
     restart: always
-volumes:
-  data:
+  djangoservice:
+    build: /Users/Shared/src/django_src/alex_django_db
+    image: django_alex
+    volumes:
+        - /Users/agou/Library/Mobile Documents/com~apple~CloudDocs/Diafora:/data_django
+    env_file: /Users/Shared/src/django_src/alex_django_db/.env
+    restart: always
