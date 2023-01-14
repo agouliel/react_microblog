@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import FlashProvider from './contexts/FlashProvider';
 import ApiProvider from './contexts/ApiProvider'
 import Header from "./components/Header";
 import FeedPage from './pages/FeedPage';
@@ -13,6 +14,7 @@ export default function App() {
   return (
     <Container fluid className="App">
     <BrowserRouter basename="/microblog">
+    <FlashProvider>
     <ApiProvider>
     <Header />
 
@@ -25,6 +27,7 @@ export default function App() {
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
     </ApiProvider>
+    </FlashProvider>
     </BrowserRouter>
     </Container>
   )
