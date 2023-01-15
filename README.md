@@ -15,8 +15,9 @@ ninja, ca-certificates, openssl@1.1, readline, sqlite, xz, python@3.11, meson, c
 
 # Installation using Docker
 
-Copy certificates into certs/ folder   
+Copy certificates into `certs/` folder   
 `cp -R ../../django_src/alex_django_db/staticfiles .`   
+`cp -R ../../django_src/alex_django_db/media .`   
 `npm install`   
 `npm run build`   
 `docker-compose up -d --build`
