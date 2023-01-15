@@ -2,7 +2,7 @@
 
 https://github.com/nvm-sh/nvm
 
-`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`   
 `nvm install node`
 
 https://apple.stackexchange.com/questions/373888/how-do-i-start-the-docker-daemon-on-macos
@@ -12,6 +12,14 @@ https://apple.stackexchange.com/questions/373888/how-do-i-start-the-docker-daemo
 
 ## Dependencies for colima:
 ninja, ca-certificates, openssl@1.1, readline, sqlite, xz, python@3.11, meson, capstone, gettext, pcre2, glib, gmp, gnu-sed, bdw-gc, libunistring, guile, libidn2, libtasn1, nettle, p11-kit, libevent, libnghttp2, unbound, gnutls, jpeg-turbo, libpng, libslirp, libssh, libusb, lzo, ncurses, pixman, snappy, vde, lz4, zstd, qemu and lima
+
+# Installation using Docker
+
+Copy certificates into certs/ folder   
+`cp -R ../../django_src/alex_django_db/staticfiles .`   
+`npm install`   
+`npm run build`   
+`docker-compose up -d --build`
 
 # Installation without Docker
 
