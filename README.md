@@ -36,6 +36,7 @@ Copy certificates into `certs/` folder
 `flask fake users 10`   
 `flask fake posts 100`   
 `flask run`   
+(or `gunicorn -b :5000 --access-logfile - --error-logfile - microblog:app --daemon`)   
 
 `git clone https://github.com/agouliel/react_microblog.git`   
 (full version: https://github.com/miguelgrinberg/react-microblog/)   
@@ -43,7 +44,8 @@ Copy certificates into `certs/` folder
 `rm .env.production`   
 `npm install`   
 `npm start`   
-(or `npm run build && npx serve -s build`)
+(or `npm run build && npx serve -s build`)   
+(or `npm run build & copy & nginx`)
 
 # Getting Started with Create React App
 
